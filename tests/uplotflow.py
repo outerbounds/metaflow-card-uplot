@@ -3,7 +3,7 @@ from metaflow import step, FlowSpec, card
 
 class UPlotFlow(FlowSpec):
 
-    @card(type='uplot_timeseries')
+    @card(type='uplot')
     @step
     def start(self):
         import pandas

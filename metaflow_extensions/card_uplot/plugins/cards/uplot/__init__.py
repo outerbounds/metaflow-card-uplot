@@ -33,7 +33,7 @@ class UPlotTimeseriesCard(MetaflowCard):
 
         chevron = self._get_mustache()
         tmpl = self._read_template()
-        df = task.data[self._attr_nm].data
+        df = task[self._attr_nm].data
         data = [[ts.timestamp() for ts in df.index]]
         for col in df:
             data.append(list(df[col].values))
